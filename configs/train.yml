@@ -6,7 +6,6 @@ kmeans:
 data:
   data: "data/products-1k.csv"
   columns: "configs/columns.json"
-  size: 10000
 
 spark:
   app_name: "clusteroff"
