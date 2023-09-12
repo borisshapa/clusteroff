@@ -13,7 +13,6 @@ class KMeansConfig:
 class DataConfig:
     data: str = dataclasses.field(default="data/openfoodfacts-products.jsonl")
     columns: str = dataclasses.field(default="configs/columns.json")
-    size: int = dataclasses.field(default=100000)
 
 
 @dataclasses.dataclass

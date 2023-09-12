@@ -10,7 +10,6 @@ FEATURES_COLUMN = "scaled_feature"
 def preprocess(
     df: pyspark.sql.DataFrame,
     columns_filename: str,
-    size: int,
 ) -> pyspark.sql.DataFrame:
     with open(columns_filename, "r") as columns_file:
         columns = ujson.load(columns_file)

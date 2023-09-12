@@ -20,7 +20,7 @@ def train(config: configs.TrainConfig):
     )
 
     data = spark.read.option("sep", "\t").option("header", True).csv(config.data.data)
-    df = utils.preprocess(data, config.data.columns, config.data.size)
+    df = utils.preprocess(data, config.data.columns)
 
     kmeans_kwargs = dataclasses.asdict(config.kmeans)
     loguru.logger.info("Using kmeans model with parameters: {}", kmeans_kwargs)
