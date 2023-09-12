@@ -31,7 +31,9 @@ def main(data_path: str, columns_path: str, limit: int, save_to: str):
         for row in csvreader:
             skip = False
             for col_index in feature_column_index:
-                if row[col_index] == "":
+                try:
+                    float(row[col_index])
+                except ValueError:
                     skip = True
                     break
             if skip:
